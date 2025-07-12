@@ -1,0 +1,47 @@
+theme = "gruvbox_dark" # Change to any theme you prefer, e.g. "onedark", "gruvbox_dark", etc.
+
+[editor]
+line-number = "relative"       # "relative" or "absolute"
+mouse = true
+cursorline = true
+auto-save = true
+completion-trigger-len = 1
+idle-timeout = 250             # ms before triggering LSP actions
+scrolloff = 8
+
+[editor.statusline]
+left = ["mode", "spinner", "file-name"]
+center = ["diagnostics"]
+right = ["selections", "position", "file-encoding", "file-type"]
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.whitespace]
+render = "all"
+characters.tab = "→"
+characters.space = "·"
+characters.nbsp = "⍽"
+characters.newline = "⏎"
+
+[editor.indent-guides]
+render = true
+character = "│"
+
+[keys.normal]
+"C-s" = ":w"
+"C-q" = ":q"
+"C-S-q" = ":q!"
+"space" = { "f" = ":format", "r" = ":reload", "c" = ":config-reload" }
+"ret" = "move_line_down"
+"backspace" = "move_line_up"
+"J" = ["goto_line_end", "insert_mode"]
+"K" = "hover"
+
+[keys.insert]
+"C-s" = ":w"
